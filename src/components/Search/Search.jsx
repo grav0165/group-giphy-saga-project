@@ -18,10 +18,11 @@ function Search() { // return will return rendered HTML
             type: 'SEARCH_GIPHY',
             payload: queryText
         })
+        setQueryText('')
     }
 
     const giphy = useSelector((store) => store.giphy)
-    console.log('giphy: ', giphy);
+    console.log('giphy is the following array: ', giphy);
     // (event) => {setQueryText(event.target.value)
     // const handleText =  (event) => {
     //     console.log('event'), event;
@@ -49,12 +50,14 @@ function Search() { // return will return rendered HTML
             </form>
             <h3>List of GIFs</h3>
             <ul>
-                {/* 
-                GIFs go here!! :) 
-                arrayOfGifs.map(gif){
-                    <li>{gif}</li>
+                {
+                giphy.map( (gif) => {
+                    return(
+                    <img src={gif?.images?.original?.url} />
+                    )
+                })
                 }
-                */}
+               
             </ul>
         </>
     )
