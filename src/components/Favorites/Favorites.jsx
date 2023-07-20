@@ -21,10 +21,10 @@ const Favorites = () => {
             {
                 favoriteGifs.map( (gif) => 
                 <Card key={gif.id}>
-                    <CardMedia 
+                    {/* <CardMedia 
                     sx={{ height: 200}}
                     image='https://media.giphy.com/media/Td2t0SIt6nr1PGP2CV/giphy.gif'
-                    />
+                    /> */}
                 </Card>
 
 
