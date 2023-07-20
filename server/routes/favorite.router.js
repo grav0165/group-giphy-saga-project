@@ -8,6 +8,8 @@ router.get('/', (req, res) => {
   res.sendStatus(200);
 });
 
+// grab image
+
 // add a new favorite
 router.post('/', (req, res) => {
   res.sendStatus(200);
