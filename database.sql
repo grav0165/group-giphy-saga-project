@@ -5,6 +5,9 @@ CREATE TABLE "favorites" (
     "link" VARCHAR (500) NOT NULL,
     "catagory_id" INT
 )
+
+INSERT INTO "favorites" ("link")
+VALUES ('https://media.giphy.com/media/Td2t0SIt6nr1PGP2CV/giphy.gif')
 -- You'll need a table for storing each giphy image favorite
 -- Each favorite image can be assigned 1 of the following categories as a Foreign Key
 
