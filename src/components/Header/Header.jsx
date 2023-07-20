@@ -37,7 +37,7 @@ function Header() {
 return(
         <header className='header-div'>
             <Box sx={{}}>
-                <AppBar position="stactic">
+                <AppBar position="static">
                     <Toolbar>
                         <IconButton
                             size="large"

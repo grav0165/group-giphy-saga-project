@@ -19,7 +19,7 @@ function* searchGiphy(action) {
         let giphyResponse = yield axios.get(`/api/search/${action.payload}`)
         // yield console.log('giphyResponse', giphyResponse.data);
         // put = dispatch
-        yield put({ type: 'SET_GIPHY', payload: giphyResponse.data})
+        yield put({ type: 'SET_GIPHY', payload: giphyResponse.data.data})
     } catch (error) {
         console.log('error searchGiphy:', error)
     }
