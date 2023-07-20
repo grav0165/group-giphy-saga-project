@@ -9,6 +9,8 @@
     "pg": "^8.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-giphy-searchbox": "^1.5.4",
+    "react-giphy-searchbox-techedge": "^1.5.4-techedge.0",
     "react-router-dom": "^5.3.4",
     "react-scripts": "^5.0.1"
   },
