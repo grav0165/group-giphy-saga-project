@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import './NewPlantForm.css';
 import MenuItem from '@mui/material/MenuItem';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -11,6 +10,28 @@ import TextField from '@mui/material/TextField';
 import { Box } from '@mui/material';
 
 const Favorites = () => {
+
+    // Sourcing in dispatch
+    const dispatch = useDispatch();
+
+    const favoriteGifs = useSelector(store => store.favorites);
+
+    return(
+        <div className='favorite-list'>
+            {
+                favoriteGifs.map( (gif) => 
+                <Card key={gif.id}>
+                    <CardMedia 
+                    sx={{ height: 200}}
+                    image='https://media.giphy.com/media/Td2t0SIt6nr1PGP2CV/giphy.gif'
+                    />
+                </Card>
+
+
+                )
+            }
+        </div>
+    )
 
 
 
