@@ -1,9 +1,12 @@
 import React from 'react';
-import Favorites from '../Favorites/Favorites';
+import './App.css'
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux'
-import Search from '../Search/Search';
+
+// Importing in components
 import Header from '../Header/Header';
+import Favorites from '../Favorites/Favorites';
+import Search from '../Search/Search';
 
 function App(props) {
 

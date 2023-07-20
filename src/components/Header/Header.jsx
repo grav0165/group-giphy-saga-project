@@ -15,9 +15,8 @@ function Header() {
 
 
 return(
-    <div>
         <header>
-            <Box>
+            <Box sx={{ padding: 0, }}>
                 <AppBar position="stactic">
                     <Toolbar>
                         <IconButton
@@ -28,15 +27,13 @@ return(
                             >
                                 <MenuIcon />
                             </IconButton>
-                            <Typography variant="h2" component="div" sx={{ flexGrow: 1}}>
-                                Gif Links
+                            <Typography variant="h4" component="div" sx={{ flexGrow: 1}}>
+                                Giphy Search App
                             </Typography>
                     </Toolbar>
                 </AppBar>
             </Box>
-            <h2>Giphy Search!</h2>
         </header>
-    </div>
 )
 
 
