@@ -3,25 +3,33 @@
     // Add GIF's to their 'favorites' collection
 
 // import dependencies
-import { useDispatch } from "react";
-import react, {useEffect} from 'react';
-
+import react, { useState, useEffect } from "react";
+import {useDispatch, useSelector} from 'react-redux';
 
 // create the component function
 function Search() { // return will return rendered HTML
-    // let dispatch = useDispatch();
+    const dispatch = useDispatch();
 
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log('submit clicked!');
         // dispatch payload text input
-        /*
         dispatch({
-            type: 'QUERY'
-            payload: textInput
+            type: 'SEARCH_GIPHY',
+            payload: queryText
         })
-        */
     }
+
+    const giphy = useSelector((store) => store.giphy)
+    console.log('giphy: ', giphy);
+    // (event) => {setQueryText(event.target.value)
+    // const handleText =  (event) => {
+    //     console.log('event'), event;
+    // }
+
+    const [queryText, setQueryText] = useState('')
+
+    const [gifData, setGifData] = useState([])
 
     // axios route to GET GIFs
 
@@ -35,7 +43,7 @@ function Search() { // return will return rendered HTML
             <h2>Search for GIFS</h2>
             <p>Search for GIFs via the input below! Press the 'favorite' button to add them to your favorites! 😁</p>
             <form onSubmit={() => handleSubmit(event)}>
-                <input type="text" placeholder="GIF Query"/>
+                <input type="text" placeholder="GIF Query" value={queryText} onChange={(event) => {setQueryText(event.target.value)}}/>
                 <br /><br />
                 <button type="submit">Submit Query</button>
             </form>
